@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f2f1; /* สีพื้นหลัง Mint อ่อนๆ */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.app-header {
+  background-color: #b2dfdb; /* Soft Mint */
+  padding: 15px;
+  text-align: center;
+  color: #004d40;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Home View */
+.bmi-circle {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #80cbc4, #4db6ac);
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+  box-shadow: 0 4px 10px rgba(77, 182, 172, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.bmi-value { font-size: 3.5rem; font-weight: bold; }
+.bmi-label { font-size: 1.2rem; opacity: 0.9; }
+
+.input-card {
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; color: #555; }
+.form-group input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-save {
+  width: 100%;
+  padding: 12px;
+  background-color: #26a69a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-save:hover { background-color: #00897b; }
+
+/* Table */
+.table-responsive { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background-color: #e0f2f1; color: #00695c; }
+.btn-delete { 
+  color: white; 
+  background-color: #ef5350; 
+  border: none; 
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  display: flex;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.bottom-nav button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  color: #757575;
+  cursor: pointer;
+}
+
+.bottom-nav button.active {
+  color: #009688;
+  font-weight: bold;
+  border-top: 3px solid #009688;
 }
